@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<div class="wrapper">
+
+<fieldset class="searchBar">
+    <legend>Sök</legend>
+    <input type="text" id="icao-k" value="ESOW">
+
+    <input type="submit" id="search" value="Sök">
+</fieldset>
+
+<article id="metar">
+<h1 id="metarH">METAR</h1>
+<div id="metarText"></div>
+</article>
+
+<article id="taf">
+<h1 id="tafH">TAF</h1>
+<div id="tafText"></div>
+</article>
+
+<article id="notam">
+<h1 id="notamH">NOTAM</h1>
+<div id="notamText"></div>
+</article>
+</div>
+
+
+<script src="js/secretKey.js"></script>
+<script src="js/getData.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+article{
+    margin:10px;
+}
+
+article#metar{
+
+}
+
+@media print {
+    .searchBar{
+        visibility: collapse;
+    }
+}

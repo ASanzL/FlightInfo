@@ -5,6 +5,12 @@ article{
 article#metar{
 
 }
+a.reload{
+    color:#404040;
+}
+a.reload:hover{
+    text-decoration: none;
+}
 
 @media print {
     .searchBar{

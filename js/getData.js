@@ -6,13 +6,11 @@ var searchButton = document.getElementById('search');
 
 
 
-getInfo = function (xhr, name, valueName, icaok, isNotam) {
-
+getInfo = function (xhr, name, valueName, icaok, isNotam, isReload=false) {
     document.getElementById(name + 'Text').innerHTML = "Söker...";
     document.getElementById(name + "H").innerHTML = name.toUpperCase() + " - " +icaok ;
 
     if(xhr.status === 200){
-
         responeObject = JSON.parse(xhr.responseText);
 
         var content = "";
@@ -25,8 +23,14 @@ getInfo = function (xhr, name, valueName, icaok, isNotam) {
 
         document.getElementById(name + 'Text').innerHTML = content;
     }
-    else{
-        document.getElementById(name + 'Text').innerHTML = "Ett fel inträffa. Försök igen.";
+    else {
+        if (isReload == false) {
+            document.getElementById(name + 'Text').innerHTML = '<a href="#" class="reload" id="reload' + name + '">Ett fel inträffa. Klicka här för att försök igen.</a>';
+            document.getElementById('reload' + name).addEventListener('click', function (event) {
+                getInfo(xhr, name, valueName, icaok, isNotam, true);
+                event.preventDefault();
+            });
+        }
     }
 };
 

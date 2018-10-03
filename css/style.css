@@ -28,6 +28,10 @@ a.reload{
 a.reload:hover{
     text-decoration: none;
 }
+img{
+    width:100%;
+    max-width:800px;
+}
 input[type=text]{
     text-transform: uppercase;
     font-size: 17px;

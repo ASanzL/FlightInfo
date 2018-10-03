@@ -65,6 +65,9 @@ search = function (event) {
     xhrNotam.open('GET', notamURL, true);
     xhrNotam.send(null);
     document.getElementById('notamText').innerHTML = "Söker...";
+
+    document.getElementById('swcH').innerHTML = "SWC - Norden";
+    document.getElementById('swcText').innerHTML = '<img src="https://www.aro.lfv.se/tor/nswc2aro.gif?930066" alt="SWC Karta">';
     }
     event.preventDefault();
 }

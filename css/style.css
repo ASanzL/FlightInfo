@@ -1,9 +1,26 @@
+body{
+    margin:0px;
+    padding:0px;
+    background-color: #fefefe;
+}
 article{
     margin:10px;
 }
-
-article#metar{
-
+section{
+    margin:20px 5px 0px 5px;
+    background-color:#ededed;
+    padding:5px;
+}
+h1{
+    color:#494949;
+    font-family: sans-serif;
+}
+div#metarText, div#tafText, div#notamText{
+    white-space: pre-wrap;
+    font-family: monospace;
+    font-size: 18px;
+    color:#575757;
+    line-height: 1.4;
 }
 a.reload{
     color:#404040;
@@ -11,9 +28,42 @@ a.reload{
 a.reload:hover{
     text-decoration: none;
 }
+input[type=text]{
+    text-transform: uppercase;
+    font-size: 17px;
+    color:#4f4e4e;
+    padding:3px;
+    border:1px solid #c6c6c6;
+}
+input[type=text]:hover{
+    background-color:#fafafa;
+}
+form{
+    margin: 5px;
+}
+fieldset{
+    border:1px solid #9d9d9d;
+}
+legend{
+    font-family: sans-serif;
+    text-transform: uppercase;
+    padding:0px 10px 0px 10px;
+    color:#999999;
+}
+input[type=submit]{
+    background-color: #ffcbcb;
+    border:none;
+    padding:5px;
+    font-size:16px;
+    text-transform: uppercase;
+}
+input[type=submit]:hover{
+    cursor: pointer;
+    background-color: #edb4b4;
+}
 
 @media print {
-    .searchBar{
+    form{
         visibility: collapse;
     }
 }
